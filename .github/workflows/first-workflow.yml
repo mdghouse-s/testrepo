@@ -6,7 +6,5 @@ jobs:
     steps:
       - name: Print Greeting
         run: echo "Welcome to Actions"
-      - name: Print GoodBye
-        run: |
-          pwd
-          echo "Done - Bye"
+      - name: Clone Repo
+        uses: checkout@v3
