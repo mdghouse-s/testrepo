@@ -9,7 +9,7 @@ jobs:
       - name: Print Greeting
         run: echo "Welcome to Actions"
       - name: Clone Repo
-        uses: checkout@v3
+        uses: actions/checkout@v3
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
