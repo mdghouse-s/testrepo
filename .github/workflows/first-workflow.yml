@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  first-job:
+  build-test:
     runs-on: ubuntu-latest
     steps:
       - name: Print Greeting
@@ -19,3 +19,9 @@ jobs:
         run: mvn -B package
       - name: Run Tests
         run: mvn -B test
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Heroku
+        run: echo "Deploying to Cloud"
